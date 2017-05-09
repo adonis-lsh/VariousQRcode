@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         mImageView = (ImageView) findViewById(R.id.imageView);
         Bitmap bitmap = MakeQRCodeUtil.makeQRImage("www.bendaidai.top", 220, 220);
         mQrcodeContent.setImageBitmap(bitmap);
+        mImageView.setImageBitmap(MakeQRCodeUtil.addBackground(this));
     }
 
     public void pixelClick(View view) {
